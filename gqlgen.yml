@@ -1,0 +1,19 @@
+schema:
+  - graphql/schema/*.graphql
+
+exec:
+  filename: graphql/generated/generated.go
+  package: generated
+
+model:
+  filename: graphql/model/models_gen.go
+  package: model
+
+resolver:
+  layout: follow-schema
+  dir: graphql/resolver
+  package: resolver
+
+models:
+  Product:
+    model: github.com/mferdian/Go-GraphQL/domain/product.Product
