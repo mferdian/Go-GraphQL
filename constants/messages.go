@@ -19,6 +19,10 @@ const (
 	MESSAGE_FAILED_REGISTER            = "failed register"
 	MESSAGE_SUCCESS_REGISTER           = "success register"
 	MESSAGE_FAILED_CREATE_PROPOSAL     = "failed create proposal"
+	MESSAGE_FAILED_CREATE_PRODUCT      = "failed create product"
+	MESSAGE_FAILED_GET_ALL_PRODUCTS    = "failed get all product"
+	MESSAGE_FAILED_UPDATE_PRODUCT      = "failed update product"
+	MESSAGE_FAILED_DELETE_PRODUCT      = "failed deleted product"
 
 	MESSAGE_SUCCESS_CREATE_USER     = "success create user"
 	MESSAGE_SUCCESS_GET_DETAIL_USER = "success get detail user"
@@ -26,6 +30,9 @@ const (
 	MESSAGE_SUCCESS_UPDATE_USER     = "success update user"
 	MESSAGE_SUCCESS_DELETE_USER     = "success delete user"
 	MESSAGE_SUCCESS_LOGIN_USER      = "success login user"
+	MESSAGE_SUCCESS_CREATE_PRODUCT  = "success create product"
+	MESSAGE_SUCCESS_GET_ALL_PRODUCT = "success get all product"
+	MESSAGE_SUCCESS_UPDATE_PRODUCT  = "success update product"
 )
 
 var (
@@ -59,4 +66,11 @@ var (
 	ErrInvalidProposalName      = errors.New("invalid proposal name")
 	ErrCreateProposal           = errors.New("failed to create proposal")
 	ErrGetAllUser               = errors.New("failed get all users")
+	ErrInvalidDescription       = errors.New("invalid product description")
+	ErrInvalidPrice             = errors.New("invalid product price")
+	ErrCretaeProduct            = errors.New("error create product")
+	ErrGetAllProduct            = errors.New("error get all product")
+	ErrGetProductByID           = errors.New("error get product")
+	ErrUpdateProduct            = errors.New("error update product")
+	ErrDeleteProduct            = errors.New("error delete product")
 )
