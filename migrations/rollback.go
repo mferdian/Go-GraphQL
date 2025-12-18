@@ -1,6 +1,7 @@
 package migrations
 
 import (
+	"github.com/mferdian/Go-GraphQL/domain/product"
 	"github.com/mferdian/Go-GraphQL/domain/user"
 	"gorm.io/gorm"
 )
@@ -8,6 +9,7 @@ import (
 func Rollback(db *gorm.DB) error {
 	tables := []interface{}{
 		&user.User{},
+		&product.Product{},
 	}
 
 	for _, table := range tables {

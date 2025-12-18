@@ -22,7 +22,7 @@ type (
 	}
 )
 
-func NewUserController(productService IProductService) *ProductController {
+func NewProductController(productService IProductService) *ProductController {
 	return &ProductController{
 		productService: productService,
 	}

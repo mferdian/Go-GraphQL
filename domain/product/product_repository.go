@@ -23,7 +23,7 @@ type (
 	}
 )
 
-func NewUserRepository(db *gorm.DB) *ProductRepository {
+func NewProductRepository(db *gorm.DB) *ProductRepository {
 	return &ProductRepository{
 		db: db,
 	}
@@ -69,8 +69,8 @@ func (pr *ProductRepository) GetAllProduct(ctx context.Context, tx *gorm.DB, sea
 
 	if search != "" {
 		searchValue := "%" + strings.ToLower(search) + "%"
-		query = query.Where("LOWER(name) LIKE ? OR LOWER(email) LIKE ?",
-			searchValue, searchValue)
+		query = query.Where("LOWER(name) LIKE ? OR LOWER(merk) LIKE ? OR LOWER(material) LIKE ?",
+			searchValue, searchValue, searchValue)
 	}
 
 	if err := query.Find(&users).Error; err != nil {

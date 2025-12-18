@@ -1,12 +1,30 @@
 type Product {
   id: ID!
   name: String!
-  description: String
-  merk: String!
+  description: String!
+  merk: String
   material: String
   price: Float!
 }
 
+type Pagination {
+  page: Int!
+  perPage: Int!
+  maxPage: Int!
+  count: Int!
+}
+
+type ProductPagination {
+  data: [Product!]!
+  pagination: Pagination!
+}
+
 type Query {
-  products: [Product!]!
+  products(search: String): [Product!]!
+  product(id: ID!): Product!
+  productsWithPagination(
+    page: Int!
+    perPage: Int!
+    search: String
+  ): ProductPagination!
 }
