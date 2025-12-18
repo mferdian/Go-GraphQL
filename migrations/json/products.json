@@ -1,0 +1,42 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+    "name": "Jam Tangan Premium",
+    "description": "Jam tangan dengan desain elegan dan tahan air hingga 100 meter",
+    "merk": "Rolex",
+    "material": "Stainless Steel & Sapphire Crystal",
+    "price": 35000000
+  },
+  {
+    "id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+    "name": "Sepatu Lari",
+    "description": "Sepatu lari dengan teknologi cushioning terbaru untuk kenyamanan maksimal",
+    "merk": "Nike",
+    "material": "Mesh & Synthetic Rubber",
+    "price": 1500000
+  },
+  {
+    "id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
+    "name": "Laptop Gaming",
+    "description": "Laptop gaming dengan processor Intel Core i9 dan GPU RTX 4080",
+    "merk": "ASUS ROG",
+    "material": "Aluminum Alloy",
+    "price": 25000000
+  },
+  {
+    "id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
+    "name": "Smartphone Flagship",
+    "description": "Smartphone dengan kamera 200MP dan baterai 5000mAh",
+    "merk": "Samsung",
+    "material": "Gorilla Glass & Aluminum Frame",
+    "price": 18000000
+  },
+  {
+    "id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b",
+    "name": "Tas Ransel",
+    "description": "Tas ransel waterproof dengan kapasitas 30L untuk aktivitas outdoor",
+    "merk": "Eiger",
+    "material": "Nylon & Polyester",
+    "price": 750000
+  }
+]

@@ -25,7 +25,7 @@ type (
 	}
 )
 
-func NewUserService(productRepo IProductRepository, jwtService jwt.InterfaceJWTService) *ProductService {
+func NewProductService(productRepo IProductRepository, jwtService jwt.InterfaceJWTService) *ProductService {
 	return &ProductService{
 		productRepo: productRepo,
 		jwtService:  jwtService,
@@ -78,7 +78,7 @@ func (ps *ProductService) GetAllProduct(ctx context.Context, search string) ([]P
 	users, err := ps.productRepo.GetAllProduct(ctx, nil, search)
 
 	if err != nil {
-		return nil, constants.ErrGetAllUser
+		return nil, constants.ErrGetAllProduct
 	}
 
 	var datas []ProductResponse

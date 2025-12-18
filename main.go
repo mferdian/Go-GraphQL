@@ -9,6 +9,7 @@ import (
 	"github.com/mferdian/Go-GraphQL/cmd"
 	"github.com/mferdian/Go-GraphQL/config/database"
 	"github.com/mferdian/Go-GraphQL/config/jwt"
+	"github.com/mferdian/Go-GraphQL/domain/product"
 	"github.com/mferdian/Go-GraphQL/domain/user"
 	"github.com/mferdian/Go-GraphQL/logging"
 	"github.com/mferdian/Go-GraphQL/middleware"
@@ -41,14 +42,23 @@ func main() {
 		userRepo       = user.NewUserRepository(db)
 		userService    = user.NewUserService(userRepo, jwtService)
 		userController = user.NewUserController(userService)
+
+		productRepo = product.NewProductRepository(db)
+		productService = product.NewProductService(productRepo, jwtService)
+		productController = product.NewProductController(productService)
 	)
 
 	server := gin.Default()
 	server.Use(middleware.CORSMiddleware())
 
+	
+
 	routes.PublicRoutes(server, userController)
 	routes.AdminRoutes(server, userController, jwtService)
 	routes.UserRoutes(server, userController, jwtService)
+	routes.ProductRoutes(server, productController, jwtService)
+	routes.GraphQLRoutes(server, productService, jwtService)
+
 
 	server.Static("/assets", "./assets")
 

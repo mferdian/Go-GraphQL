@@ -2,5 +2,26 @@
 
 package model
 
+type Pagination struct {
+	Page    int `json:"page"`
+	PerPage int `json:"perPage"`
+	MaxPage int `json:"maxPage"`
+	Count   int `json:"count"`
+}
+
+type Product struct {
+	ID          string  `json:"id"`
+	Name        string  `json:"name"`
+	Description string  `json:"description"`
+	Merk        *string `json:"merk,omitempty"`
+	Material    *string `json:"material,omitempty"`
+	Price       float64 `json:"price"`
+}
+
+type ProductPagination struct {
+	Data       []*Product  `json:"data"`
+	Pagination *Pagination `json:"pagination"`
+}
+
 type Query struct {
 }

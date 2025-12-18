@@ -16,4 +16,6 @@ resolver:
 
 models:
   Product:
-    model: github.com/mferdian/Go-GraphQL/domain/product.Product
+    fields:
+      id:
+        resolver: false
